@@ -110,37 +110,6 @@ npm run build
 ```bash
 npm run preview
 ```
-
----
-
-## ❗ Troubleshooting
-
-### Tailwind styles not working
-
-* Ensure `@tailwindcss/vite` is installed
-* Check `vite.config.ts` includes the Tailwind plugin
-* Restart dev server after changes
-
----
-
-### npm permission errors
-
-Run:
-
-```bash
-sudo chown -R $(id -u):$(id -g) ~/.npm
-```
-
----
-
-### Module not found errors
-
-Install missing packages:
-
-```bash
-npm install <package-name>
-```
-
 ---
 
 ## 📌 Future Improvements
