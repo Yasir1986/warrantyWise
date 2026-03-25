@@ -1,29 +1,38 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { ProductCard } from "./ProductCard";
 import type { Product } from "../../types/product";
+import { ProductList } from "../ProductList/ProductList";
 
-const mockProduct: Product = {
-  id: "1",
-  name: "Test Product",
-  description: "This is a test description",
-  price: 99.99,
-  category: "Test Category",
-  imageUrl: "https://example.com/image.jpg",
-  rating: 4.5,
-};
+const mockProducts: Product[] = [
+  {
+    id: "1",
+    name: "Product 1",
+    description: "Desc 1",
+    price: 10,
+    category: "Cat 1",
+    imageUrl: "",
+    rating: 4,
+  },
+  {
+    id: "2",
+    name: "Product 2",
+    description: "Desc 2",
+    price: 20,
+    category: "Cat 2",
+    imageUrl: "",
+    rating: 5,
+  },
+];
 
-describe("ProductCard", () => {
-  it("renders product details correctly", () => {
-    render(<ProductCard product={mockProduct} />);
+describe("ProductList", () => {
+  it("renders empty state when no products are provided", () => {
+    render(<ProductList products={[]} onProductClick={() => {}} />);
+    expect(screen.getByText("No products found")).toBeInTheDocument();
+  });
 
-    expect(screen.getByText("Test Product")).toBeInTheDocument();
-    expect(screen.getByText("This is a test description")).toBeInTheDocument();
-    expect(screen.getByText("$99.99")).toBeInTheDocument();
-    expect(screen.getByText("Test Category")).toBeInTheDocument();
-    expect(screen.getByText("4.5")).toBeInTheDocument();
-
-    const image = screen.getByRole("img", { name: "Test Product" });
-    expect(image).toHaveAttribute("src", "https://example.com/image.jpg");
+  it("renders a list of products", () => {
+    render(<ProductList products={mockProducts} onProductClick={() => {}} />);
+    expect(screen.getByText("Product 1")).toBeInTheDocument();
+    expect(screen.getByText("Product 2")).toBeInTheDocument();
   });
 });

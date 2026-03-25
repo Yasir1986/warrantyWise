@@ -2,9 +2,15 @@ import React from "react";
 import { Star } from "lucide-react";
 import type { ProductCardProps } from "./ProductCard.types";
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+export const ProductCard: React.FC<ProductCardProps> = ({
+  product,
+  onClick,
+}) => {
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-200 flex flex-col h-full">
+    <div
+      onClick={onClick}
+      className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-200 flex flex-col h-full cursor-pointer"
+    >
       <div className="aspect-square w-full relative overflow-hidden bg-gray-50">
         <img
           src={product.imageUrl}

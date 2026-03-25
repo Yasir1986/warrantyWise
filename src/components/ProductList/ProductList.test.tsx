@@ -26,12 +26,12 @@ const mockProducts: Product[] = [
 
 describe("ProductList", () => {
   it("renders empty state when no products are provided", () => {
-    render(<ProductList products={[]} />);
+    render(<ProductList products={[]} onProductClick={() => {}} />);
     expect(screen.getByText("No products found")).toBeInTheDocument();
   });
 
   it("renders a list of products", () => {
-    render(<ProductList products={mockProducts} />);
+    render(<ProductList products={mockProducts} onProductClick={() => {}} />);
     expect(screen.getByText("Product 1")).toBeInTheDocument();
     expect(screen.getByText("Product 2")).toBeInTheDocument();
   });

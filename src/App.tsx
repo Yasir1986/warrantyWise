@@ -1,11 +1,16 @@
+import { useState } from "react";
 import { useProducts } from "./hooks/useProduct";
-import { mockProducts, categories } from "./data/mockProduct";
-import { FilterBar } from "./components/FilterBar/FilterBar";
-import { ShoppingBag } from "lucide-react";
+import { categories, mockProducts } from "./data/mockProduct";
 import { ProductList } from "./components/ProductList/ProductList";
+import { ShoppingBag } from "lucide-react";
 import { SearchBar } from "./components/SearchBar/SearchBar";
+import { FilterBar } from "./components/FilterBar/FilterBar";
+import { ProductModal } from "./components/ProductModal/ProductModal";
+import type { Product } from "./types/product";
 
 export default function App() {
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
   const {
     products,
     searchQuery,
@@ -53,8 +58,13 @@ export default function App() {
           {products.length === 1 ? "product" : "products"}
         </div>
 
-        <ProductList products={products} />
+        <ProductList products={products} onProductClick={setSelectedProduct} />
       </main>
+
+      <ProductModal
+        product={selectedProduct}
+        onClose={() => setSelectedProduct(null)}
+      />
     </div>
   );
 }
