@@ -28,50 +28,6 @@ Live Deploy Link: https://warranty-wise.netlify.app/
 
 ---
 
-## 📁 Project Structure
-
-src/
-│
-├── components/                     # Reusable UI components
-│   ├── FilterBar/
-│   │   ├── FilterBar.tsx
-│   │   ├── FilterBar.types.ts
-│   │   └── FilterBar.test.tsx
-│   │
-│   ├── ProductCard/
-│   │   ├── ProductCard.tsx
-│   │   ├── ProductCard.types.ts
-│   │   └── ProductCard.test.tsx
-│   │
-│   ├── ProductList/
-│   │   ├── ProductList.tsx
-│   │   ├── ProductList.types.ts
-│   │   └── ProductList.test.tsx
-│   │
-│   ├── ProductModal/
-│   │   ├── ProductModal.tsx
-│   │   ├── ProductModal.types.ts
-│   │   └── ProductModal.test.tsx
-│   │
-│   └── SearchBar/
-│       ├── SearchBar.tsx
-│       ├── SearchBar.types.ts
-│       └── SearchBar.test.tsx
-│
-├── data/
-│   └── mockProduct.ts
-│
-├── hooks/
-│   └── useProduct.ts
-│
-├── types/
-│   └── product.ts
-│
-├── App.tsx
-├── App.test.tsx
-├── main.tsx
-└── index.css
-
 ## ⚙️ Getting Started
 
 ### 1. Clone the repository
