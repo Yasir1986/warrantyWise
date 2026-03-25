@@ -30,38 +30,6 @@ Live Deploy Link: https://warranty-wise.netlify.app/
 
 ## 📁 Project Structure
 
-# WarrantyWise Storefront
-
-A modern React storefront application built with **React + TypeScript + Vite + Tailwind CSS v4**.  
-This project demonstrates a clean, scalable frontend architecture with filtering, searching, and product listing features.
-
-**Live Deploy Link:** [https://warranty-wise.netlify.app/](https://warranty-wise.netlify.app/)
-
----
-
-## 🚀 Tech Stack
-
-- React 19  
-- TypeScript  
-- Vite  
-- Tailwind CSS v4  
-- Lucide React (icons)  
-
----
-
-## 📦 Features
-
-- 🔍 Search products  
-- 🏷️ Filter by category  
-- ↕️ Sort products  
-- 🛍️ Product listing UI  
-- ⚡ Fast development with Vite  
-- 🎨 Utility-first styling with Tailwind CSS  
-
----
-
-## 📁 Project Structure
-
 src/
 │
 ├── components/                     # Reusable UI components
