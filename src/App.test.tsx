@@ -6,7 +6,7 @@ describe("App", () => {
   it("renders basic UI", () => {
     render(<App />);
 
-    expect(screen.getByText("Storefront")).toBeInTheDocument();
+    expect(screen.getByText("WarrantyWise")).toBeInTheDocument();
     expect(screen.getByText("Our Products")).toBeInTheDocument();
   });
 
@@ -14,12 +14,10 @@ describe("App", () => {
     render(<App />);
 
     expect(
-      screen.getByText("Wireless Noise-Cancelling Headphones")
+      screen.getByText("Wireless Noise-Cancelling Headphones"),
     ).toBeInTheDocument();
 
-    expect(
-      screen.getByText("Minimalist Leather Wallet")
-    ).toBeInTheDocument();
+    expect(screen.getByText("Minimalist Leather Wallet")).toBeInTheDocument();
   });
 
   it("filters products via search", () => {
@@ -29,12 +27,10 @@ describe("App", () => {
 
     fireEvent.change(input, { target: { value: "wallet" } });
 
-    expect(
-      screen.getByText("Minimalist Leather Wallet")
-    ).toBeInTheDocument();
+    expect(screen.getByText("Minimalist Leather Wallet")).toBeInTheDocument();
 
     expect(
-      screen.queryByText("Wireless Noise-Cancelling Headphones")
+      screen.queryByText("Wireless Noise-Cancelling Headphones"),
     ).not.toBeInTheDocument();
   });
 
@@ -45,11 +41,11 @@ describe("App", () => {
     fireEvent.click(button);
 
     expect(
-      screen.getByText("Wireless Noise-Cancelling Headphones")
+      screen.getByText("Wireless Noise-Cancelling Headphones"),
     ).toBeInTheDocument();
 
     expect(
-      screen.queryByText("Minimalist Leather Wallet")
+      screen.queryByText("Minimalist Leather Wallet"),
     ).not.toBeInTheDocument();
   });
 });

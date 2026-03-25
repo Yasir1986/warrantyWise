@@ -8,4 +8,9 @@ export interface Product {
   rating: number;
 }
 
-export type SortOption = 'price-asc' | 'price-desc' | 'name-asc' | 'name-desc' | 'rating-desc';
+export type SortOption =
+  | "price-asc"
+  | "price-desc"
+  | "name-asc"
+  | "name-desc"
+  | "rating-desc";

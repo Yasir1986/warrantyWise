@@ -1,5 +1,5 @@
-import { Search } from 'lucide-react';
-import type { SearchBarProps } from './SearchBar.types';
+import { Search } from "lucide-react";
+import type { SearchBarProps } from "./SearchBar.types";
 
 export function SearchBar({ value, onChange }: SearchBarProps) {
   return (

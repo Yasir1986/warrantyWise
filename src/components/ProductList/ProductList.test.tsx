@@ -1,22 +1,38 @@
-import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import { ProductList } from './ProductList';
-import type { Product } from '../../types/product';
+import { describe, it, expect } from "vitest";
+import { render, screen } from "@testing-library/react";
+import { ProductList } from "./ProductList";
+import type { Product } from "../../types/product";
 
 const mockProducts: Product[] = [
-  { id: '1', name: 'Product 1', description: 'Desc 1', price: 10, category: 'Cat 1', imageUrl: '', rating: 4 },
-  { id: '2', name: 'Product 2', description: 'Desc 2', price: 20, category: 'Cat 2', imageUrl: '', rating: 5 },
+  {
+    id: "1",
+    name: "Product 1",
+    description: "Desc 1",
+    price: 10,
+    category: "Cat 1",
+    imageUrl: "",
+    rating: 4,
+  },
+  {
+    id: "2",
+    name: "Product 2",
+    description: "Desc 2",
+    price: 20,
+    category: "Cat 2",
+    imageUrl: "",
+    rating: 5,
+  },
 ];
 
-describe('ProductList', () => {
-  it('renders empty state when no products are provided', () => {
+describe("ProductList", () => {
+  it("renders empty state when no products are provided", () => {
     render(<ProductList products={[]} />);
-    expect(screen.getByText('No products found')).toBeInTheDocument();
+    expect(screen.getByText("No products found")).toBeInTheDocument();
   });
 
-  it('renders a list of products', () => {
+  it("renders a list of products", () => {
     render(<ProductList products={mockProducts} />);
-    expect(screen.getByText('Product 1')).toBeInTheDocument();
-    expect(screen.getByText('Product 2')).toBeInTheDocument();
+    expect(screen.getByText("Product 1")).toBeInTheDocument();
+    expect(screen.getByText("Product 2")).toBeInTheDocument();
   });
 });

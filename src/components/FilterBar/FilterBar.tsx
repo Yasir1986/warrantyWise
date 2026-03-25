@@ -1,7 +1,6 @@
-
-import { SlidersHorizontal, ArrowUpDown } from 'lucide-react';
-import type { FilterBarProps } from './FilterBar.types';
-import type { SortOption } from '../../types/product';
+import { SlidersHorizontal, ArrowUpDown } from "lucide-react";
+import type { FilterBarProps } from "./FilterBar.types";
+import type { SortOption } from "../../types/product";
 
 export function FilterBar({
   categories,
@@ -16,23 +15,23 @@ export function FilterBar({
         <SlidersHorizontal className="w-5 h-5 text-gray-400 shrink-0" />
         <div className="flex flex-wrap gap-2">
           <button
-            onClick={() => onCategoryChange('All')}
+            onClick={() => onCategoryChange("All")}
             className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-              selectedCategory === 'All'
-                ? 'bg-indigo-50 text-indigo-700'
-                : 'text-gray-600 hover:bg-gray-50'
+              selectedCategory === "All"
+                ? "bg-indigo-50 text-indigo-700"
+                : "text-gray-600 hover:bg-gray-50"
             }`}
           >
             All
           </button>
-          {categories.map(category => (
+          {categories.map((category) => (
             <button
               key={category}
               onClick={() => onCategoryChange(category)}
               className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                 selectedCategory === category
-                  ? 'bg-indigo-50 text-indigo-700'
-                  : 'text-gray-600 hover:bg-gray-50'
+                  ? "bg-indigo-50 text-indigo-700"
+                  : "text-gray-600 hover:bg-gray-50"
               }`}
             >
               {category}
