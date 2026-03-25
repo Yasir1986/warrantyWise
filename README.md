@@ -1,73 +1,187 @@
-# React + TypeScript + Vite
+# WarrantyWise Storefront
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React storefront application built with **React + TypeScript + Vite + Tailwind CSS v4**.
+This project demonstrates a clean, scalable frontend architecture with filtering, searching, and product listing features.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Tech Stack
 
-## React Compiler
+* **React 19**
+* **TypeScript**
+* **Vite**
+* **Tailwind CSS v4**
+* **Lucide React (icons)**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📦 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* 🔍 Search products
+* 🏷️ Filter by category
+* ↕️ Sort products
+* 🛍️ Product listing UI
+* ⚡ Fast development with Vite
+* 🎨 Utility-first styling with Tailwind CSS
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📁 Project Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+│
+├── components/        # Reusable UI components
+│   ├── FilterBar/
+│   ├── ProductList/
+│   └── SearchBar/
+│
+├── data/              # Mock data
+│   └── mockProduct.ts
+│
+├── hooks/             # Custom React hooks
+│   └── useProduct.ts
+│
+├── App.tsx            # Main app component
+├── main.tsx           # App entry point
+└── index.css          # Tailwind styles
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Yasir1986/warrantyWise
+cd warrantywise
 ```
+
+---
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+### 3. Run the development server
+
+```bash
+npm run dev
+```
+
+---
+
+### 4. Open in browser
+
+Visit:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🎨 Tailwind CSS Setup (v4)
+
+This project uses Tailwind CSS v4 with Vite.
+
+Key setup:
+
+* Installed Tailwind:
+
+```bash
+npm install -D tailwindcss @tailwindcss/vite
+```
+
+* Configured `vite.config.ts`:
+
+```ts
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+})
+```
+
+* Added Tailwind import in `index.css`:
+
+```css
+@import "tailwindcss";
+```
+
+---
+
+## 🧪 Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## 🔍 Preview Production Build
+
+```bash
+npm run preview
+```
+
+---
+
+## ❗ Troubleshooting
+
+### Tailwind styles not working
+
+* Ensure `@tailwindcss/vite` is installed
+* Check `vite.config.ts` includes the Tailwind plugin
+* Restart dev server after changes
+
+---
+
+### npm permission errors
+
+Run:
+
+```bash
+sudo chown -R $(id -u):$(id -g) ~/.npm
+```
+
+---
+
+### Module not found errors
+
+Install missing packages:
+
+```bash
+npm install <package-name>
+```
+
+---
+
+## 📌 Future Improvements
+
+* Add backend/API integration
+* Implement authentication
+* Add cart & checkout flow
+* Improve UI with component libraries
+* Add testing (Jest / React Testing Library)
+
+---
+
+## 📄 License
+
+This project is for demo/learing purposes.
+
+---
+
+## 👨‍💻 Author
+
+Yasir
+
+---

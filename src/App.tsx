@@ -25,7 +25,7 @@ export default function App() {
               <ShoppingBag className="w-5 h-5 text-white" />
             </div>
             <h1 className="text-xl font-bold tracking-tight hidden sm:block">
-              Storefront
+              WarrantyWise
             </h1>
           </div>
           <div className="flex-1 max-w-md flex justify-end">
