@@ -30,24 +30,47 @@ Live Deploy Link: https://warranty-wise.netlify.app/
 
 ## 📁 Project Structure
 
-```
 src/
 │
-├── components/        # Reusable UI components
+├── components/
 │   ├── FilterBar/
+│   │   ├── FilterBar.tsx
+│   │   ├── FilterBar.types.ts
+│   │   └── FilterBar.test.tsx
+│   │
+│   ├── ProductCard/
+│   │   ├── ProductCard.tsx
+│   │   ├── ProductCard.types.ts
+│   │   └── ProductCard.test.tsx
+│   │
 │   ├── ProductList/
+│   │   ├── ProductList.tsx
+│   │   ├── ProductList.types.ts
+│   │   └── ProductList.test.tsx
+│   │
+│   ├── ProductModal/
+│   │   ├── ProductModal.tsx
+│   │   ├── ProductModal.types.ts
+│   │   └── ProductModal.test.tsx
+│   │
 │   └── SearchBar/
+│       ├── SearchBar.tsx
+│       ├── SearchBar.types.ts
+│       └── SearchBar.test.tsx
 │
-├── data/              # Mock data
+├── data/
 │   └── mockProduct.ts
 │
-├── hooks/             # Custom React hooks
+├── hooks/
 │   └── useProduct.ts
 │
-├── App.tsx            # Main app component
-├── main.tsx           # App entry point
-└── index.css          # Tailwind styles
-```
+├── types/
+│   └── product.ts
+│
+├── App.tsx
+├── App.test.tsx
+├── main.tsx
+└── index.css
 
 ---
 
