@@ -28,29 +28,6 @@ Live Deploy Link: https://warranty-wise.netlify.app/
 
 ---
 
-## 📁 Project Structure
-
-```
-src/
-│
-├── components/        # Reusable UI components
-│   ├── FilterBar/
-│   ├── ProductList/
-│   └── SearchBar/
-│
-├── data/              # Mock data
-│   └── mockProduct.ts
-│
-├── hooks/             # Custom React hooks
-│   └── useProduct.ts
-│
-├── App.tsx            # Main app component
-├── main.tsx           # App entry point
-└── index.css          # Tailwind styles
-```
-
----
-
 ## ⚙️ Getting Started
 
 ### 1. Clone the repository
@@ -133,37 +110,6 @@ npm run build
 ```bash
 npm run preview
 ```
-
----
-
-## ❗ Troubleshooting
-
-### Tailwind styles not working
-
-* Ensure `@tailwindcss/vite` is installed
-* Check `vite.config.ts` includes the Tailwind plugin
-* Restart dev server after changes
-
----
-
-### npm permission errors
-
-Run:
-
-```bash
-sudo chown -R $(id -u):$(id -g) ~/.npm
-```
-
----
-
-### Module not found errors
-
-Install missing packages:
-
-```bash
-npm install <package-name>
-```
-
 ---
 
 ## 📌 Future Improvements
