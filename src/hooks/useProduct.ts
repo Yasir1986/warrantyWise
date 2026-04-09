@@ -20,7 +20,7 @@ export function useProducts({ initialProducts }: UseProductsProps) {
       );
     }
 
-    // Filter by search query
+    // Filter by search query parameter
     if (searchQuery.trim() !== "") {
       const lowerCaseQuery = searchQuery.toLowerCase();
       result = result.filter(
